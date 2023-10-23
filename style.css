@@ -1,0 +1,70 @@
+/* ===== 변수 구간 ===== */
+:root {
+  --color-main: #A7A8CD;
+  --color-sub: #FFDFDF;
+  --color-dark: #454555;
+  --color-point: #E6E6FA;
+  --color-point2: #CAA8A8;
+  --color-empty: #FFFFFF;
+  --color-total: #FCFCD4;
+  --color-em : #960328;
+  --color-half :#FFF3F3;
+}
+
+table {
+  margin: 12px 12px 12px 0;
+  width: 100%;
+  min-width: 700px;
+  height: 200px;
+  text-align: center;
+  border-collapse: separate;
+  border: 1px solid black;
+  table-layout: fixed;
+  background-color: var(--color-point);
+}
+
+th, td {
+  border: 1px solid gray;
+}
+
+th {
+  height: 40px;
+  background-color: var(--color-main);
+  font-size: medium;
+}
+
+th:has(input):hover {
+  background-color: var(--color-dark);
+  color: var(--color-empty);
+}
+
+th:has(:checked),th:has(:checked):hover{
+  background-color: var(--color-point2);
+}
+
+table tr:last-child, td:last-child {
+  background-color: var(--color-total);
+  font-weight: bolder;
+}
+
+td:empty {
+  background-color: var(--color-empty);
+}
+
+tr:last-child td:last-child {
+  background-color: var(--color-sub);
+  color: var(--color-em);
+  font-size: large;
+}
+
+table:nth-of-type(2) tr:not(:last-of-type) td:nth-of-type(3n) {
+  background-color: var(--color-half);
+  font-weight: bolder;
+}
+
+table:nth-of-type(2) tr:last-of-type td:nth-of-type(3n) {
+  color: var(--color-em);
+}
+
+
+
